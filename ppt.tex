@@ -102,6 +102,38 @@
     \label{kubetopology}
   \end{figure}
 \end{frame}
+
+\begin{frame}
+  \frametitle{性能测试}
+%   \begin{table}[H]
+%     \centering
+%     \caption{纳米管参数}
+%     \begin{tabular}{cccccc} % 控制表格的格式
+%         \toprule
+%         参数 & m  & n  & 原子数 & 内径     & 长度    \\
+%         \midrule
+%         二硫化钼纳米管  & 15 & 15 & 3420   & 2.3014nm & 11.85nm \\
+%         碳纳米管  & 16 & 6  & 1112   & 1.5424nm & 6.0nm   \\
+%         \bottomrule
+%     \end{tabular}
+%     \label{tbl_mcnt_nanotube}
+% \end{table}
+\begin{table}[H] % 控制表格的格式，可以是l,c,r
+  \caption{Sysbench文件I/O测试结果}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{cccc}
+    \toprule
+  参数 & RBD & CephFS & NFS\\
+    \midrule
+  磁盘随机读写（MiB/s） & 21.56 读；14.38 写 & 22.32 读；14.88 写 & 6.28 读；4.19 写；\\
+  磁盘顺序写入（MiB/s） & 123.20 & 147.17 & 99.25\\
+  磁盘随机访问（MiB/s） & 5185.46 & 5790.62 & 5684.66\\
+  % 数值3 & 15 & 15 & 15\\
+    \bottomrule
+  \end{tabular}
+  }
+\end{table}
+\end{frame}
 % \begin{frame}[c]{列表怎么用}
 % 就是下面这么用，前面是个点点，原因是我在模板里自定义了，你可以修改，模板中搜索：列表前面的点点自定义
 %   \begin{itemize}
